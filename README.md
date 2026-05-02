@@ -28,7 +28,7 @@ The project uses a layered architecture:
 - **C# Logic Layer**: contains the business and numerical calculation logic
 - **JSON + subprocess**: connects Python with the compiled C# logic executable
 - **PyInstaller**: packages the Python application into a desktop executable
-
+![NEST Architecture](assets/architecture.png)
 ## Numerical Methods
 
 NEST includes several root-finding methods:
