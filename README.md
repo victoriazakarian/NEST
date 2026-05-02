@@ -1,63 +1,57 @@
-NEST – Numerical Evaluation & Strategic Toolkit
+# NEST
 
-NEST is a desktop business decision-support application designed to compare strategic options using financial analysis and numerical methods.
+NEST is a desktop business decision-support tool for comparing two strategic business options using financial analysis and numerical methods.
 
-🚀 Overview
+## What NEST Does
 
-The application allows users to model and compare two business alternatives by defining:
+NEST helps users compare two alternatives by entering:
 
-Revenue per unit
-Fixed and variable costs
-Expected volume
+- Revenue per unit
+- Expected volume
+- Fixed costs
+- Variable costs
 
-Based on these inputs, NEST computes:
+The application calculates:
 
-Profit functions
-Break-even points
-Crossover points
-Cost structure analysis
-Sensitivity analysis
-Final recommendation
-🧠 Architecture
+- Profit
+- Break-even point
+- Crossover point
+- Cost drivers
+- Sensitivity impact
+- Final recommendation
 
-The project follows a layered architecture:
+## Architecture
 
-Python (UI Layer)
-Handles user interaction, visualization, and charts.
-C# (Logic Layer)
-Implements business logic and numerical computation.
-Communication
-Python calls the compiled C# executable (logic.exe) using subprocess and exchanges data via JSON.
-⚙️ Numerical Methods
+The project uses a layered architecture:
 
-NEST implements multiple root-finding algorithms:
+- **Python UI**: handles the interface, charts, user input, and visualization
+- **C# Logic Layer**: contains the business and numerical calculation logic
+- **JSON + subprocess**: connects Python with the compiled C# logic executable
+- **PyInstaller**: packages the Python application into a desktop executable
 
-Bisection
-Newton-Raphson
-Secant
-Brent
-Combined (Bisection–Newton)
+## Numerical Methods
 
-These methods are used to solve business equations such as break-even and crossover points.
+NEST includes several root-finding methods:
 
-📦 Build & Run
-Run application
+- Bisection
+- Newton-Raphson
+- Secant
+- Brent
+- Combined Bisection-Newton method
 
-Execute:
+These methods are used to solve equations such as break-even and crossover calculations.
+
+## Technologies Used
+
+- Python
+- CustomTkinter
+- Matplotlib
+- C#
+- JSON
+- PyInstaller
+
+## How to Run
+
+Download and run:
 
 NEST.exe
-🛠 Technologies
-Python (customtkinter, matplotlib)
-C# (.NET)
-JSON for data exchange
-PyInstaller for packaging
-📊 Features
-Business option comparison
-Break-even analysis
-Profit visualization
-Sensitivity analysis
-Automatic recommendation
-📌 Notes
-The .exe file is a packaged version of the Python UI.
-The system is designed with separation of concerns between UI and logic layers.
-C# logic can be extended or replaced with other backends if needed.
