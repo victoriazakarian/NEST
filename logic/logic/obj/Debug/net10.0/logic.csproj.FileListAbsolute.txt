@@ -1,4 +1,0 @@
-C:\Users\HP\Desktop\nest\logic\logic\obj\Debug\net10.0\logic.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\HP\Desktop\nest\logic\logic\obj\Debug\net10.0\logic.AssemblyInfoInputs.cache
-C:\Users\HP\Desktop\nest\logic\logic\obj\Debug\net10.0\logic.AssemblyInfo.cs
-C:\Users\HP\Desktop\nest\logic\logic\obj\Debug\net10.0\logic.csproj.CoreCompileInputs.cache
