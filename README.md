@@ -85,7 +85,7 @@ python nest.py
 NEST/
 ├── nest.py        # Python application source code
 ├── NEST.exe       # Packaged Windows application
-├── assets/        # Project images and assets
+├── assets/        # Project images and architecture
 └── README.md      # Project documentation
 ```
 
