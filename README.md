@@ -1,68 +1,105 @@
-# NEST
+# NEST — Numerical Evaluation for Strategic Tradeoffs
 
-NEST is a desktop business decision-support tool for comparing two strategic business options using financial analysis and numerical methods.
+NEST is a Python-based desktop application designed to help users compare two business alternatives using financial analysis, numerical methods, and interactive data visualization.
 
-## What NEST Does
+The application evaluates profitability, identifies break-even and crossover points, analyzes cost structures, and generates recommendations to support business decisions.
 
-NEST helps users compare two alternatives by entering:
+## Features
 
-- Revenue per unit
-- Expected volume
-- Fixed costs
-- Variable costs
+### Financial Analysis
+- Calculate total revenue, total costs, and profit.
+- Compare two business alternatives at their expected sales volumes.
+- Calculate profit margins and cost per unit.
+- Identify break-even and crossover points.
 
-The application calculates:
+### Cost Analysis
+- Add multiple fixed and variable cost components.
+- Categorize costs by type, such as labor, materials, transport, and overhead.
+- Identify major cost drivers.
+- Analyze how changes in individual costs affect profitability.
 
-- Profit
-- Break-even point
-- Crossover point
-- Cost drivers
-- Sensitivity impact
-- Final recommendation
+### Numerical Methods
 
-## Architecture
-
-The project uses a layered architecture:
-
-- **Python UI**: handles the interface, charts, user input, and visualization
-- **C# Logic Layer**: contains the business and numerical calculation logic
-- **JSON + subprocess**: connects Python with the compiled C# logic executable
-- **PyInstaller**: packages the Python application into a desktop executable
-![NEST Architecture](assets/architecture.png)
-## Numerical Methods
-
-NEST includes several root-finding methods:
+NEST implements five root-finding methods:
 
 - Bisection
 - Newton-Raphson
 - Secant
 - Brent
-- Combined Bisection-Newton method
+- Hybrid Bisection-Newton
 
-These methods are used to solve equations such as break-even and crossover calculations.
+These methods are used to solve break-even, crossover, and other numerical equations.
+
+The application also allows users to compare numerical methods based on their convergence results, iteration counts, and errors.
+
+### Data Visualization
+- Profit-versus-volume graphs
+- Financial comparison summaries
+- Cost breakdown tables
+- Sensitivity analysis results
+- Numerical method comparisons
+
+### Business Recommendations
+
+NEST compares the profitability of two alternatives and generates recommendations based on expected sales volumes, break-even points, crossover points, and cost drivers.
 
 ## Technologies Used
 
-- Python
-- CustomTkinter
-- Matplotlib
-- C#
-- JSON
-- PyInstaller
+- **Python** — Application logic and financial calculations
+- **CustomTkinter** — Desktop graphical user interface
+- **NumPy** — Numerical calculations
+- **Matplotlib** — Data visualization
+- **Pillow** — Image handling
+- **PyInstaller** — Windows executable packaging
 
 ## How to Run
+
+### Option 1 — Run the Windows Application
 
 1. Download [NEST.exe](https://github.com/victoriazakarian/NEST/raw/refs/heads/main/NEST.exe).
 2. Open the executable on Windows.
 3. Enter the financial data for two business alternatives.
-4. Run the analysis to view calculations, visualizations, and recommendations.
+4. Run the analysis to view calculations, graphs, and recommendations.
 
-**No Python or C# installation is required.** The executable includes the components needed to run the application.
+No Python installation is required to run the packaged Windows application.
 
-**Note:** Windows SmartScreen may display a warning because the executable is not digitally signed.
+*Note: Windows SmartScreen may display a warning because the executable is not digitally signed.*
 
-## Source Code
+### Option 2 — Run from Python Source
 
-- `nest.py` — Python user interface and visualization code.
-- `logic.zip` — C# calculation engine source code.
-- `NEST.exe` — Standalone Windows application.
+Install the required libraries:
+
+```bash
+pip install customtkinter numpy matplotlib pillow
+```
+
+Run the application:
+
+```bash
+python nest.py
+```
+
+## Project Structure
+
+```text
+NEST/
+├── nest.py        # Python application source code
+├── NEST.exe       # Packaged Windows application
+├── assets/        # Project images and assets
+└── README.md      # Project documentation
+```
+
+## How NEST Works
+
+1. The user enters revenue, expected sales volume, and cost information for two business alternatives.
+2. Python calculates financial indicators for each alternative.
+3. Numerical methods identify break-even and crossover points.
+4. Sensitivity analysis evaluates the impact of changing costs.
+5. Matplotlib generates visualizations.
+6. The application displays a comparison and recommendation.
+
+## Project Purpose
+
+NEST was developed to combine programming, numerical analysis, financial modeling, and data visualization in a practical decision-support application.
+
+The project demonstrates the use of Python to transform business inputs into meaningful analytical results.
