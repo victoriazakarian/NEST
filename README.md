@@ -52,6 +52,17 @@ These methods are used to solve equations such as break-even and crossover calcu
 
 ## How to Run
 
-Download and run:
+1. Download [NEST.exe](https://github.com/victoriazakarian/NEST/raw/refs/heads/main/NEST.exe).
+2. Open the executable on Windows.
+3. Enter the financial data for two business alternatives.
+4. Run the analysis to view calculations, visualizations, and recommendations.
 
-NEST.exe
+**No Python or C# installation is required.** The executable includes the components needed to run the application.
+
+**Note:** Windows SmartScreen may display a warning because the executable is not digitally signed.
+
+## Source Code
+
+- `nest.py` — Python user interface and visualization code.
+- `logic.zip` — C# calculation engine source code.
+- `NEST.exe` — Standalone Windows application.
