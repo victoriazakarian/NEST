@@ -88,6 +88,13 @@ NEST/
 ├── assets/        # Project images and architecture
 └── README.md      # Project documentation
 ```
+## Architecture
+
+NEST is built entirely in Python, integrating financial analysis, numerical methods, sensitivity analysis, and data visualization into one desktop application.
+
+### Architecture Diagram
+
+![NEST Architecture](assets/architecture.png)
 
 ## How NEST Works
 
